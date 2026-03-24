@@ -1,0 +1,133 @@
+/* ══════════════════════════════
+   TABS
+══════════════════════════════ */
+.sk-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 44px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 14px;
+  padding: 6px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sk-tab {
+  position: relative;
+  padding: 9px 22px;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: color 0.2s;
+  z-index: 0;
+}
+
+.sk-tab:hover { color: var(--text); }
+
+.sk-tab-active { color: #fff; }
+
+.sk-tab-bg {
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  z-index: -1;
+  box-shadow: 0 4px 14px rgba(99,102,241,0.4);
+}
+
+.sk-tab-label { position: relative; z-index: 1; }
+
+/* ══════════════════════════════
+   GRID
+══════════════════════════════ */
+.sk-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 14px;
+}
+
+/* ══════════════════════════════
+   CARD
+══════════════════════════════ */
+.sk-card {
+  position: relative;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 16px;
+  padding: 24px 12px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  overflow: hidden;
+  cursor: default;
+  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+.sk-card:hover {
+  border-color: rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+}
+
+/* coloured top strip */
+.sk-card-top-bar {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  border-radius: 16px 16px 0 0;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.sk-card:hover .sk-card-top-bar { opacity: 1; }
+
+/* icon */
+.sk-icon-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.sk-card:hover .sk-icon-box {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px var(--c, rgba(99,102,241,0.4));
+}
+
+/* label */
+.sk-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-align: center;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.sk-card:hover .sk-label { color: #fff; }
+
+/* ══════════════════════════════
+   RESPONSIVE
+══════════════════════════════ */
+@media (max-width: 640px) {
+  .sk-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 10px; }
+  .sk-icon-box { width: 50px; height: 50px; font-size: 1.5rem; }
+  .sk-card { padding: 20px 10px 14px; }
+  .sk-tabs { padding: 4px; }
+  .sk-tab { padding: 8px 14px; font-size: 0.8rem; }
+}

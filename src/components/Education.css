@@ -1,0 +1,120 @@
+.edu-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.edu-card {
+  display: flex;
+  gap: 24px;
+  padding: 32px;
+  align-items: flex-start;
+}
+
+.edu-icon-wrap {
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--primary), var(--primary2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.5rem;
+  box-shadow: 0 8px 20px rgba(99,102,241,0.35);
+}
+
+.edu-body { flex: 1; }
+
+.edu-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.edu-status {
+  display: inline-block;
+  background: rgba(16,185,129,0.15);
+  border: 1px solid rgba(16,185,129,0.3);
+  color: #34d399;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.edu-body h3 {
+  color: var(--text);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.edu-field {
+  color: #a5b4fc;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.edu-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.edu-period {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--muted);
+  font-size: 0.8rem;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.edu-grade {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #fbbf24;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.edu-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.edu-inst {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.edu-loc {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--muted2);
+  font-size: 0.82rem;
+}
+
+@media (max-width: 600px) {
+  .edu-card { flex-direction: column; }
+  .edu-top  { flex-direction: column; }
+  .edu-right { align-items: flex-start; }
+  .edu-footer { flex-direction: column; gap: 6px; align-items: flex-start; }
+}
