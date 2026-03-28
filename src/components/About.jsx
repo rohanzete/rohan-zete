@@ -116,7 +116,7 @@ export default function About() {
 
           {/* Resume button */}
           <a
-            href="https://drive.google.com/file/d/10wzioKfsWRaDzledWGL8KJRD4fEVwUuL/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1meXM6j0_WfS0wqrNMNSMAOutt_Ivd2ab/view?usp=drive_link"
             target="_blank" rel="noreferrer"
             className="about-resume-btn"
           >
